@@ -21,7 +21,7 @@ app.post("/" , function(req,res) {
     res.send("Calculation is "+result);
 
     
-        })
+   })
 
 app.listen(3000 , function(){
      console.log("server started on port 3000");
