@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    background-color: gainsboro;
+    width: 40%;
+    height: 50%;
+    border-radius: 5%;
+
+}
+body{
+    background-color:royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form>*{
+
+    padding: 5px;
+    margin: 10px;
+}
+form{
+    margin: 30px;
+    color: red;
+    font-size: 20px;   
+}
+button{
+    font-size: 20px;
+    color: red;
+    padding: 10px 20px ;
+}
