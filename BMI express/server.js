@@ -9,6 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.listen(3000 , function(){
+    
     console.log("server started on port 3000");
 })
 
