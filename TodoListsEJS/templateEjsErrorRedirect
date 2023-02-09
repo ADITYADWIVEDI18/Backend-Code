@@ -1,0 +1,49 @@
+/*jshint esversion: 6 */
+
+const express = require("express")
+const bodyParser = require("body-parser")
+
+const app = express()
+
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.listen(3000, function () {
+    console.log("Server Started on port 3000");
+})
+
+app.get("/", function (req, res) {
+
+    var today = new Date();
+   
+    var options = {
+        weekDay: "long",
+        day: "numeric",
+        month:"long"
+    };
+
+    var day= today.toLocaleDateString("en-US" , options);
+
+    res.render('lists', { kindOfDay: day });
+})
+
+app.post("/" , function(req,res){
+
+    var item=req.body.newItem;
+
+    req.render("lists" ,{newListItem:item});
+})
+
+
+
+/* 
+when you were trying to go to local host:3000 then we land inside the get block and we could see when we were
+trying to render list where only passing the value for this variable that is "kindOfDay" we arenot passing anything "newListItem" .
+so when it tries to render a list at this point then it doesn,t actually have a value to put into this newListItem EJS tag and thats why our app crashes.
+
+So now know that every single time your try to render a list we have to provide both variable that we want to render,
+so to probably fix this error we have to add "newListItem" to our render
+ */
+ 
+ //answer in next 
