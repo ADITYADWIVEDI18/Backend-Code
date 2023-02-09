@@ -33,7 +33,7 @@ app.post("/" , function(req,res){
 
     var item =req.body.newItem;
 
-    req.redirect("/");
+    res.redirect("/");
 })
 
 /* when we save then we see that it shows that item is not defined 
