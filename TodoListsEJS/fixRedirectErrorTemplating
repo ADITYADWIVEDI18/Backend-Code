@@ -1,1 +1,42 @@
 
+/*jshint esversion: 6 */
+
+const express = require("express")
+const bodyParser = require("body-parser")
+
+const app = express()
+
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.listen(3000, function () {
+    console.log("Server Started on port 3000");
+})
+
+app.get("/", function (req, res) {
+
+    var today = new Date();
+   
+    var options = {
+        weekDay: "long",
+        day: "numeric",
+        month:"long"
+    };
+
+    var day= today.toLocaleDateString("en-US" , options);
+
+    res.render('lists', { kindOfDay: day , newListItem:item });
+})
+
+app.post("/" , function(req,res){
+
+    var item =req.body.newItem;
+
+    req.redirect("/");
+})
+
+/* when we save then we see that it shows that item is not defined 
+
+as item is declared inside the post request so it exist when we make post request to our server sos when we pass it in the get so it show itnot exist that is not defined This problem related to "Scope"
+*/
