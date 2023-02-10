@@ -42,7 +42,7 @@ app.get("/", function (req, res) {
             break;
         case 6:
             day = "Saturday";
-            break
+            break;
     }
 
     res.render('lists', { kindOfDay: day });
