@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.get("/" , function(request,response){
 
         response.sendFile(__dirname + "/index.html")
-})
+}) 
 
 app.get("/contact",function(req,res){
     res.send("number likho")})
