@@ -2,7 +2,7 @@ Download link : ( https://www.mongodb.com/try/download/shell )
 
 cd ~
 touch .bash_profile 
-ls -a 
+ls -a  
 vim .bash_profile
 i (for insert)
 alias mongod="/c/Program\ files/MongoDB/Server/4.0/bin/mongod.exe"
