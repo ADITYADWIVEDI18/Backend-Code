@@ -14,5 +14,5 @@ Open the terminal again and write
 
 mongo --version / mongos --version 
 if worked properly then  it not shows that " bash not found ".
-
+ 
 
